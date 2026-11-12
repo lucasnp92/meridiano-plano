@@ -4,9 +4,9 @@
   "fases": [
     { "n": 0, "curto": "Conhecer", "nome": "Conhecer", "linha": "Sistema de referência, documentação da MSC e o código que já existe.", "estado": "atual",
       "itens": [
-        { "nome": "Plano de acompanhamento", "estado": "andando" },
+        { "nome": "Plano de acompanhamento", "estado": "feito" },
         { "nome": "Telas comparadas com os protótipos", "estado": "andando" },
-        { "nome": "Documentação completa da MSC", "estado": "andando" },
+        { "nome": "Documentação completa da MSC", "estado": "feito" },
         { "nome": "Estudo do sistema de referência", "estado": "afazer", "f": "call" },
         { "nome": "Raio-x do código: telas, API e banco", "estado": "afazer" },
         { "nome": "Conferência do que já foi feito", "estado": "afazer", "f": "11, 15, 20, 27, 51, 54, 66, 68" }
@@ -98,8 +98,9 @@
       ] }
   ],
   "diario": [
+    { "dia": "12/11", "texto": "Documentação da MSC guardada: 94 serviços e 9 anexos" },
+    { "dia": "12/11", "texto": "Plano de acompanhamento no ar" },
     { "dia": "12/11", "texto": "Telas comparadas com os protótipos, 10 de 11" },
-    { "dia": "12/11", "texto": "Plano de acompanhamento criado" },
     { "dia": "09/11", "texto": "Página do cliente e envio por WhatsApp" },
     { "dia": "03/11", "texto": "13 reservas de teste criadas e canceladas na MSC" },
     { "dia": "07/09", "texto": "Busca com o catálogo real da MSC" },
