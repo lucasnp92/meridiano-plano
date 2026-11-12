@@ -1,0 +1,108 @@
+{
+  "atualizado": "12/11/2026",
+  "_fonte": "Itens conferidos contra docs/passagem/funcionalidades.md (as 82 funcionalidades do PRD, estado de 09/11/2026), os marcos do PRD 12.3 e as próximas etapas da call de 09/11/2026. O campo f de cada item lista os números das funcionalidades que ele cobre; 'call' marca o que veio da call. Estados: PRONTO vira feito; PARCIAL e EM PR viram andando; NÃO vira afazer. Os 'não confirmado' (11, 15, 20, 27, 51, 54, 66, 68) estão na Conferência da Fase 0.",
+  "fases": [
+    { "n": 0, "curto": "Conhecer", "nome": "Conhecer", "linha": "Sistema de referência, documentação da MSC e o código que já existe.", "estado": "atual",
+      "itens": [
+        { "nome": "Plano de acompanhamento", "estado": "andando" },
+        { "nome": "Telas comparadas com os protótipos", "estado": "andando" },
+        { "nome": "Documentação completa da MSC", "estado": "andando" },
+        { "nome": "Estudo do sistema de referência", "estado": "afazer", "f": "call" },
+        { "nome": "Raio-x do código: telas, API e banco", "estado": "afazer" },
+        { "nome": "Conferência do que já foi feito", "estado": "afazer", "f": "11, 15, 20, 27, 51, 54, 66, 68" }
+      ] },
+    { "n": 1, "curto": "Visual", "nome": "Padrão visual", "linha": "Um visual só, no molde do protótipo.", "estado": "proxima",
+      "itens": [
+        { "nome": "Regras do padrão", "estado": "afazer" },
+        { "nome": "Peças compartilhadas", "estado": "afazer" },
+        { "nome": "Busca", "estado": "andando" },
+        { "nome": "Cabine", "estado": "afazer" },
+        { "nome": "Mapa do deck", "estado": "afazer" },
+        { "nome": "Reservar", "estado": "afazer" },
+        { "nome": "Passageiros, com menos campos", "estado": "afazer", "f": "call" },
+        { "nome": "Pagamento", "estado": "afazer" },
+        { "nome": "Página do cliente", "estado": "andando" },
+        { "nome": "Detalhe da reserva", "estado": "afazer" },
+        { "nome": "Relatório", "estado": "afazer", "f": "call" },
+        { "nome": "Agências", "estado": "afazer" },
+        { "nome": "Ficha da agência", "estado": "afazer" },
+        { "nome": "Demais telas", "estado": "afazer" }
+      ] },
+    { "n": 2, "curto": "Venda", "nome": "Venda com dado real", "linha": "Busca, cabine e orçamento com o preço da MSC.", "estado": "depois",
+      "itens": [
+        { "nome": "Fundação do sistema", "estado": "feito", "f": "71, 72, 73, 75, 76, 77, 81" },
+        { "nome": "Catálogo da MSC atualizado a cada 3 horas", "estado": "feito", "f": "1, 4, 5" },
+        { "nome": "Busca com filtros", "estado": "feito", "f": "3, 7, 10, 13" },
+        { "nome": "Disponibilidade e preço da cabine", "estado": "feito", "f": "21, 22, 23, 26" },
+        { "nome": "Várias cabines no mesmo orçamento", "estado": "feito", "f": "25, 28, 29" },
+        { "nome": "PDF e página do cliente", "estado": "feito", "f": "31, 32" },
+        { "nome": "Envio por WhatsApp", "estado": "feito", "f": "33" },
+        { "nome": "Grade de preços e faixa de datas", "estado": "andando", "f": "8, 9, 12, 14, 19" },
+        { "nome": "Histórico de preço na cabine", "estado": "andando", "f": "6, 67" },
+        { "nome": "Mapa do deck", "estado": "andando", "f": "24" },
+        { "nome": "Opcionais na reserva", "estado": "andando", "f": "30" },
+        { "nome": "Duplicar orçamento para outra data", "estado": "andando", "f": "34" },
+        { "nome": "Copiar linha, comparar opções e atalho de teclado", "estado": "afazer", "f": "16, 17, 18" },
+        { "nome": "Fotos reais das cabines", "estado": "afazer", "f": "call" },
+        { "nome": "Preço igual ao da MSC, sem falha no orçamento", "estado": "afazer", "f": "call" },
+        { "nome": "Promoções da agência", "estado": "afazer" }
+      ] },
+    { "n": 3, "curto": "Reserva", "nome": "Reserva e pagamento", "linha": "Reservar, confirmar e cobrar.", "estado": "depois",
+      "itens": [
+        { "nome": "Criar reserva na MSC", "estado": "feito", "f": "35" },
+        { "nome": "Dados dos passageiros", "estado": "feito", "f": "38, 39" },
+        { "nome": "Regras de pagamento por operadora", "estado": "feito", "f": "52, 78" },
+        { "nome": "Confirmar e estender o prazo", "estado": "andando", "f": "36, 37" },
+        { "nome": "Linha do tempo da reserva", "estado": "andando", "f": "40" },
+        { "nome": "Cartão parcelado, com registro na MSC", "estado": "andando", "f": "47" },
+        { "nome": "PIX, boleto e transferência", "estado": "andando", "f": "48, 49" },
+        { "nome": "Link de pagamento por pagador", "estado": "andando", "f": "50" },
+        { "nome": "Processador de pagamento de verdade", "estado": "afazer" },
+        { "nome": "Cartão à vista direto na MSC", "estado": "afazer", "f": "46" },
+        { "nome": "E-mails ao cliente", "estado": "afazer" }
+      ] },
+    { "n": 4, "curto": "Financeiro", "nome": "Pós-venda e financeiro", "linha": "Alterações, comissão e BP Finance.", "estado": "depois",
+      "itens": [
+        { "nome": "Conferência das reservas com a MSC", "estado": "feito", "f": "44" },
+        { "nome": "Cancelamento com multa", "estado": "andando", "f": "42" },
+        { "nome": "Alteração de passageiro, upgrade e troca de data", "estado": "andando", "f": "41" },
+        { "nome": "Documentos e bilhete", "estado": "andando", "f": "43" },
+        { "nome": "Comissão em dois níveis", "estado": "andando", "f": "53" },
+        { "nome": "Visão do consultor e visão do gestor", "estado": "andando", "f": "call" },
+        { "nome": "Relatórios de gestão", "estado": "afazer", "f": "call" },
+        { "nome": "Repasse por agência", "estado": "afazer", "f": "55" },
+        { "nome": "Conciliação com processador e extrato", "estado": "afazer", "f": "56" },
+        { "nome": "Nota fiscal para a companhia", "estado": "afazer", "f": "57" },
+        { "nome": "Fechamento do mês", "estado": "afazer", "f": "58" },
+        { "nome": "Ponte com o BP Finance", "estado": "afazer", "f": "59" }
+      ] },
+    { "n": 5, "curto": "No ar", "nome": "Entrada no ar", "linha": "Homologação na MSC e virada da BP.", "estado": "depois",
+      "itens": [
+        { "nome": "Cofre de senhas", "estado": "andando", "f": "74" },
+        { "nome": "Hospedagem e ambientes", "estado": "afazer" },
+        { "nome": "Catálogo pelo canal novo da MSC", "estado": "afazer", "f": "2" },
+        { "nome": "Segurança e dados pessoais", "estado": "afazer" },
+        { "nome": "Certificação da MSC", "estado": "afazer" },
+        { "nome": "Piloto com um consultor", "estado": "afazer" },
+        { "nome": "Virada da BP", "estado": "afazer" }
+      ] },
+    { "n": 6, "curto": "Depois", "nome": "Depois da virada", "linha": "O que vem com a BP já usando.", "estado": "depois",
+      "itens": [
+        { "nome": "Grupos", "estado": "afazer", "f": "60, 61, 62, 63, 64, 65" },
+        { "nome": "Painel de administração", "estado": "afazer", "f": "79" },
+        { "nome": "Medição de uso", "estado": "afazer", "f": "80" },
+        { "nome": "Comparação e alerta de preço", "estado": "afazer", "f": "69, 70" },
+        { "nome": "Check-in web", "estado": "afazer", "f": "45" },
+        { "nome": "Costa", "estado": "afazer" },
+        { "nome": "Copiloto de IA", "estado": "afazer", "f": "82" }
+      ] }
+  ],
+  "diario": [
+    { "dia": "12/11", "texto": "Telas comparadas com os protótipos, 10 de 11" },
+    { "dia": "12/11", "texto": "Plano de acompanhamento criado" },
+    { "dia": "09/11", "texto": "Página do cliente e envio por WhatsApp" },
+    { "dia": "03/11", "texto": "13 reservas de teste criadas e canceladas na MSC" },
+    { "dia": "07/09", "texto": "Busca com o catálogo real da MSC" },
+    { "dia": "06/09", "texto": "Fundação do sistema" }
+  ]
+}

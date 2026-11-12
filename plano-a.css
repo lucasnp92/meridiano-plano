@@ -1,0 +1,27 @@
+/* Desenho A, "Painel": destaque no alto, trilho das fases e um cartão por fase. */
+/* Cores da BP (azul-marinho, azul e dourado, do BP Finance); estrutura, cantos e letras do MRG Control Panel. */
+:root{
+  --page:#F1F5F9;--card:#FFFFFF;--ink:#0D3B66;--body:#1E293B;--muted:#5B6B80;--line:#E2E8F0;--track:#E2E8F0;
+  --done:#0D3B66;--done-ink:#FFFFFF;--doing:#F4B400;--doing-ink:#0D3B66;--doing-line:#B98200;--todo:#94A3B8;
+  --now:#9A6B00;--halo:rgba(244,180,0,.28);
+  --hero-bg:#0D3B66;--hero-2:#124A7F;--hero-ink:#FFFFFF;--hero-muted:#B9CDE2;--hero-track:rgba(255,255,255,.2);--hero-done:#FFFFFF;--hero-doing:#F4B400;
+  --display:"Urbanist","Helvetica Neue",Arial,sans-serif;
+  --core:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;
+  --numeric:"Space Grotesk","Plus Jakarta Sans",Arial,sans-serif;
+  --radius:20px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --page:#081523;--card:#0F2238;--ink:#E8F0F9;--body:#CFDBE8;--muted:#8FA3B8;--line:#1D3350;--track:#22395A;
+  --done:#7FB5DF;--done-ink:#081523;--doing:#F4B400;--doing-ink:#0B1E33;--doing-line:#F4B400;--todo:#56708C;
+  --now:#F4B400;--halo:rgba(244,180,0,.22);
+  --hero-bg:#0D3B66;--hero-2:#124A7F;--hero-ink:#FFFFFF;--hero-muted:#B9CDE2;--hero-track:rgba(255,255,255,.2);--hero-done:#FFFFFF;--hero-doing:#F4B400;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --page:#081523;--card:#0F2238;--ink:#E8F0F9;--body:#CFDBE8;--muted:#8FA3B8;--line:#1D3350;--track:#22395A;
+  --done:#7FB5DF;--done-ink:#081523;--doing:#F4B400;--doing-ink:#0B1E33;--doing-line:#F4B400;--todo:#56708C;
+  --now:#F4B400;--halo:rgba(244,180,0,.22);
+  --hero-bg:#0D3B66;--hero-2:#124A7F;--hero-ink:#FFFFFF;--hero-muted:#B9CDE2;--hero-track:rgba(255,255,255,.2);--hero-done:#FFFFFF;--hero-doing:#F4B400;
+  color-scheme:dark;
+}
+.des-a .fase.f-atual{border-color:var(--doing)}

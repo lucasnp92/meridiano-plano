@@ -1,0 +1,116 @@
+/* Estrutura comum aos dois desenhos. As cores vêm do plano-a.css ou do plano-b.css. */
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--body);font-family:var(--core);font-size:15px;line-height:1.45}
+h1,h2,p,ul,ol{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit;text-decoration:none}
+.num{font-family:var(--numeric);font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8px}
+
+.pg{max-width:1080px;margin:0 auto;padding-block:24px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:20px}
+
+.topo{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
+.marca{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.marca b{font-family:var(--display);font-weight:800;font-size:22px;color:var(--ink);letter-spacing:-.01em}
+.marca span,.quando{font-size:13px;color:var(--muted)}
+.quando{display:flex;align-items:center;gap:12px}
+.tema{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.tema:hover{border-color:var(--muted)}
+.tema svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tema[data-atual="escuro"] .t-lua,.tema:not([data-atual="escuro"]) .t-sol{display:none}
+.rot{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+
+/* O destaque: a fase de agora e o plano inteiro */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;background:var(--hero-bg);color:var(--hero-ink);border-radius:var(--radius);overflow:hidden}
+.h-agora,.h-geral{padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.h-geral{background:var(--hero-2);justify-content:center;gap:14px}
+.hero .rot{color:var(--hero-muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.05;letter-spacing:-.02em;text-wrap:balance;color:var(--hero-ink)}
+.h-linha{color:var(--hero-muted);font-size:16px}
+.h-fase{display:flex;align-items:center;gap:12px;margin-top:8px;max-width:360px}
+.h-fase .num{font-size:14px;color:var(--hero-muted);white-space:nowrap}
+.h-fase b{color:var(--hero-ink);font-size:20px;font-weight:600}
+.numeros{display:flex;gap:10px 28px;flex-wrap:wrap}
+.numeros li{display:flex;flex-direction:column;gap:2px}
+.numeros b{font-size:36px;line-height:1;font-weight:600;color:var(--hero-ink)}
+.numeros span{font-size:13px;color:var(--hero-muted)}
+
+.barra{display:flex;height:8px;border-radius:999px;background:var(--track);overflow:hidden;flex:1;min-width:70px}
+.b-feito{background:var(--done)}
+.b-andando{background:var(--doing)}
+.hero .barra{background:var(--hero-track);flex:none;width:100%}
+.h-fase .barra{flex:1;width:auto}
+.hero .b-feito{background:var(--hero-done)}
+.hero .b-andando{background:var(--hero-doing)}
+
+/* O trilho das fases */
+.trilho{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));padding-block:6px}
+.no{position:relative;min-width:0}
+.no::before{content:"";position:absolute;top:17px;left:-50%;width:100%;height:2px;background:var(--track)}
+.no:first-child::before{display:none}
+.no a{display:flex;flex-direction:column;align-items:center;gap:7px;position:relative}
+.bola{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--track);color:var(--muted);font-weight:600;font-size:14px;position:relative;z-index:1}
+.t-atual .bola{background:var(--doing);border-color:var(--doing);color:var(--doing-ink);box-shadow:0 0 0 5px var(--halo)}
+.t-cheia .bola{background:var(--done);border-color:var(--done);color:var(--done-ink)}
+.t-nome{font-size:13px;font-weight:600;color:var(--muted);text-align:center}
+.t-atual .t-nome{color:var(--ink)}
+.no a:hover .t-nome{color:var(--ink)}
+
+/* As fases */
+.corpo{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;align-items:start}
+.fases{display:flex;flex-direction:column;gap:12px;min-width:0}
+.fase{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);position:relative}
+.fase summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:44px minmax(0,1fr) 170px;align-items:center;gap:14px;padding:16px 20px;position:relative;z-index:1}
+.fase summary::-webkit-details-marker{display:none}
+.anel{width:44px;height:44px;display:block}
+.anel circle{fill:none;stroke-width:4;stroke-linecap:round}
+.anel .a-fundo{stroke:var(--track);fill:var(--card)}
+.a-andando{stroke:var(--doing)}
+.a-feito{stroke:var(--done)}
+.anel text{font-family:var(--numeric);font-size:13px;font-weight:600;fill:var(--ink)}
+.f-texto{display:flex;flex-direction:column;min-width:0}
+.f-quando{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.f-atual .f-quando{color:var(--now)}
+.f-nome{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink);line-height:1.2}
+.f-linha{font-size:14px;color:var(--muted)}
+.f-conta{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);white-space:nowrap}
+.f-conta b{color:var(--ink);font-size:16px;font-weight:600}
+.itens{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px 20px;padding:2px 20px 20px 78px;position:relative;z-index:1}
+.itens li{display:flex;align-items:center;gap:9px;min-width:0;font-size:14.5px}
+.i-afazer{color:var(--muted)}
+.ic{width:16px;height:16px;flex:none}
+.ic-feito circle{fill:var(--done)}
+.ic-feito path{fill:none;stroke:var(--done-ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ic-andando circle{fill:none;stroke:var(--doing-line);stroke-width:1.6}
+.ic-andando path{fill:var(--doing-line)}
+.ic-afazer circle{fill:none;stroke:var(--todo);stroke-width:1.5}
+
+/* Últimas entregas */
+.diario{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--display);font-size:17px;font-weight:700;color:var(--ink)}
+.diario ul{display:flex;flex-direction:column;gap:12px}
+.diario li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:10px;font-size:14px}
+.dia{color:var(--muted);font-size:13px;padding-top:1px}
+.legenda{display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line);padding-top:14px;font-size:13px;color:var(--muted)}
+.legenda span{display:flex;align-items:center;gap:8px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .corpo{grid-template-columns:1fr}
+  .fase summary{grid-template-columns:44px minmax(0,1fr)}
+  .f-conta{grid-column:2}
+  .itens{padding-left:20px}
+}
+@media (max-width:560px){
+  .h-agora,.h-geral{padding:22px}
+  .bola{width:28px;height:28px;font-size:12px}
+  .no::before{top:13px}
+  .t-nome{font-size:11px}
+  .no:not(.t-atual) .t-nome{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .bola,.t-nome{transition:color .15s,background-color .15s}
+}
